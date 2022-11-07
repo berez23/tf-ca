@@ -69,7 +69,7 @@ module "ec2_instances_ca" {
   root_block_device = [
     {
       encrypted   = true
-      volume_size = 50
+      volume_size = 60
     },
   ]
   tags = {
