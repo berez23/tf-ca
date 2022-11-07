@@ -1,7 +1,7 @@
 variable "vpc_name" {
   description = "Name of VPC"
   type        = string
-  default     = "example-vpc"
+  default     = "ca-vpc"
 }
 
 variable "vpc_cidr" {
@@ -35,7 +35,7 @@ variable "vpc_enable_nat_gateway" {
 }
 
 variable "vpc_tags" {
-  description = "Tags to apply to resources created by VPC module"
+  description = "vpc-ca"
   type        = map(string)
   default = {
     Terraform   = "true"

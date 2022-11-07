@@ -1,17 +1,15 @@
 terraform {
-  /* Uncomment this block to use Terraform Cloud for this tutorial
   cloud {
-    organization = "organization-name"
+    organization = "4securitas"
     workspaces {
-      name = "learn-terraform-module-use"
+      name = "CA-DnsShield"
     }
   }
-  */
+
 
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.4.0"
+      source = "hashicorp/aws"
     }
   }
   required_version = ">= 1.1.0"
