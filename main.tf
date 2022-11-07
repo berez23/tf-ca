@@ -160,3 +160,14 @@ resource "aws_eip" "eip_manager" {
     Name = "eip-ngnix-${count.index + 1}"
   }
 }
+
+
+resource "aws_eip" "eip_bh" {
+  instance = element(module.ec2_instances_bh.*.id, count.index)
+  count    = 1
+  vpc      = true
+
+  tags = {
+    Name = "eip-ngnix-${count.index + 1}"
+  }
+}
